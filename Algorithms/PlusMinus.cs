@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackerRankSolutions
 {
-    public class PlusMinus
+    public class Algorithms
     {
 
     // Complete the plusMinus function below.
@@ -42,6 +42,18 @@ namespace HackerRankSolutions
         {
             foreach (double element in dList)
                 Console.WriteLine(string.Format("{0:N6}", element));
+        }
+
+        public class Exe
+        {
+            static void Main2(string[] args)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+                ;
+                Algorithms.plusMinus(arr);
+            }
         }
 
     }
