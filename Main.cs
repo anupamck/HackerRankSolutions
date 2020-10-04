@@ -15,7 +15,7 @@ namespace HackerRankSolutions
 
                 int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
                 ;
-                Algorithms.plusMinus(arr);
+            Algorithms.plusMinus(arr);
             }
     }
 }
