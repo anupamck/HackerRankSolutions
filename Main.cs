@@ -10,12 +10,10 @@ namespace HackerRankSolutions
     public class Exe
     {
         static void Main(string[] args)
-            {
-                int n = Convert.ToInt32(Console.ReadLine());
-
-                int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-                ;
-            Algorithms.plusMinus(arr);
-            }
+        {
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+                  ;
+            Algorithms_WarmUp.miniMaxSum(arr);
+        }
     }
 }
