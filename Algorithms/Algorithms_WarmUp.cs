@@ -33,12 +33,6 @@ class Algorithms_WarmUp
         return new string(chr, n);
     }
 
-    public static void MainStaircase(string[] args)
-    {
-        int n = Convert.ToInt32(Console.ReadLine());
-
-        staircase(n);
-    }
 
     public static int diagonalDifference(List<List<int>> arr)
     {
@@ -55,27 +49,6 @@ class Algorithms_WarmUp
         return Math.Abs(sumUp - sumDown);
     }
 
-    public static void MainDiagonalDifference(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-        int n = Convert.ToInt32(Console.ReadLine().Trim());
-
-        List<List<int>> arr = new List<List<int>>();
-
-        for (int i = 0; i < n; i++)
-        {
-            arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList());
-        }
-
-        int result = diagonalDifference(arr);
-
-        textWriter.WriteLine(result);
-        Console.ReadKey();
-
-        textWriter.Flush();
-        textWriter.Close();
-    }
 
     public static void miniMaxSum(int[] arr)
     {
@@ -98,10 +71,3 @@ class Algorithms_WarmUp
 
     }
 
-    public static void MainMiniMaxSum(string[] args)
-    {
-        int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-        ;
-        miniMaxSum(arr);
-    }
-}
