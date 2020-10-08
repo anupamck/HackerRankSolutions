@@ -11,9 +11,8 @@ namespace HackerRankSolutions
     {
         static void Main(string[] args)
         {
-            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-                  ;
-            Algorithms_WarmUp.miniMaxSum(arr);
+            Console.WriteLine(Algorithms_WarmUp.timeConversion("12:07:30AM"));
+            Console.ReadKey();
         }
     }
 }
