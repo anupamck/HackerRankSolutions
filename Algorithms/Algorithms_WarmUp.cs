@@ -96,20 +96,19 @@ class Algorithms_WarmUp
     public static string timeConversion(string s)
     {
         int hour = Convert.ToInt32(s.Substring(0,2));
-        string meridian = s.Substring(8, 2);       
+        string meridian = s.Substring(8, 2);
+        string outTime;
+
+        if (meridian.ToLower() == "am" && hour == 12)
+            outTime = String.Concat((hour - 12).ToString("00"), s.Substring(2, 6));
         
-        if (meridian.ToLower() == "am")
-        {
-            if (hour < 12)
-                return s.Substring(0, 8);
-            else
-                return String.Concat((hour - 12).ToString("00"), s.Substring(2, 6));
-        }
+        else if (meridian.ToLower() == "pm" && hour < 12)
+            outTime = String.Concat((hour + 12).ToString("00"), s.Substring(2, 6));
+
         else
-            if (hour < 12)
-                return String.Concat((hour + 12).ToString("00"), s.Substring(2, 6));
-            else
-                return s.Substring(0, 8);       
+            outTime = s.Substring(0, 8);
+
+            return outTime;       
     }
 
 }

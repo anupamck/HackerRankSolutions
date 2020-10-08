@@ -11,7 +11,7 @@ namespace HackerRankSolutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Algorithms_WarmUp.timeConversion("12:07:30AM"));
+            Console.WriteLine(Algorithms_WarmUp.timeConversion("07:07:30PM"));
             Console.ReadKey();
         }
     }
