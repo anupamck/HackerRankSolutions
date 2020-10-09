@@ -11,8 +11,25 @@ namespace HackerRankSolutions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Algorithms_WarmUp.timeConversion("07:07:30PM"));
+            int gradesCount = Convert.ToInt32(Console.ReadLine().Trim());
+
+            List<int> grades = new List<int>();
+
+            for (int i = 0; i < gradesCount; i++)
+            {
+                grades.Add(Convert.ToInt32(Console.ReadLine().Trim()));
+            }
+
+            List<int> revisedGrades = Algorithms_WarmUp.gradingStudents(grades);
+
+            foreach (int grade in revisedGrades)
+                Console.WriteLine(grade);
             Console.ReadKey();
+
+
+
+
+
         }
     }
 }

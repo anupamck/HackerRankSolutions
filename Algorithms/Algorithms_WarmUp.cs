@@ -111,5 +111,40 @@ class Algorithms_WarmUp
             return outTime;       
     }
 
+    public static List<int> gradingStudents(List<int> grades)
+    {
+        List<int> revisedGrades = new List<int>();
+
+        foreach (int grade in grades)
+        {
+            switch (valueGrade(grade))
+            {
+                case "fail": revisedGrades.Add(grade);
+                    break;
+
+                case "retain": revisedGrades.Add(grade);
+                    break;
+
+                case "round": revisedGrades.Add(grade + (5 - grade % 5));
+                    break;                                                                                          
+            }
+        }
+
+        return revisedGrades;
+    }
+
+    public static string valueGrade(int marks)
+    {
+        if (marks < 37)
+            return "fail";
+
+        if (marks % 5 > 2)
+            return "round";
+
+        return "retain";
+    }
+
+
+
 }
 
